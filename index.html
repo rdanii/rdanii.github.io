@@ -229,20 +229,58 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <form>
+            <!-- Alert -->
+            <div
+              class="alert alert-success alert-dismissible fade show d-none"
+              role="alert"
+            >
+              <strong>Terima kasih!</strong> Pesan anda sudah terkirim.<button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!-- Akhir Alert -->
+
+            <form name="rd-contact-form">
               <div class="mb-3">
                 <label>Nama</label>
-                <input type="text" class="form-control" id="email" />
+                <input type="text" class="form-control" id="nama" name="nama" />
               </div>
               <div class="mb-3">
                 <label>Email</label>
-                <input type="email" class="form-control" id="email" />
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                />
               </div>
               <div class="mb-3">
                 <label>Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea
+                  class="form-control"
+                  id="pesan"
+                  name="pesan"
+                  rows="3"
+                ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-kirim">
+                Kirim
+              </button>
+              <button
+                class="btn btn-primary d-none btn-loading"
+                type="button"
+                disabled
+              >
+                <span
+                  class="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -258,5 +296,31 @@
     </footer>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxbO4v11T-UkKvoN14lU4cHaDt1QbuswLt6V2MC1isfGGhO2SQy0irHOLKYjxg2e4sD/exec";
+
+      const form = document.forms["rd-contact-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const alert = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Ketika tombol Kirim diklik
+        // Tampilkan tombol Loading, Hilangkan tombol Kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // Tampilkan tombol Kirim, Hilangkan tombol Loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
