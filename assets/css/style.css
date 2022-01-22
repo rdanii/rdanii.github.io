@@ -1,0 +1,36 @@
+.jumbotron {
+  padding-top: 5rem;
+  background-image: url(../img/my-background.jpg);
+  background-size: cover;
+  background-color: #e2edff;
+}
+
+.display-4 {
+  font-family: Sedgwick Ave;
+  color: red;
+  text-shadow: 3px 3px 3px black;
+}
+
+.lead {
+  color: blue;
+  text-shadow: 3px 3px 3px black;
+  font-weight: 500;
+  font-style: italic;
+}
+
+#about {
+  margin-top: -20px;
+}
+
+#projects {
+  background-color: #e2edff;
+  margin-top: -70px;
+}
+
+footer span {
+  font-weight: bold;
+}
+
+section {
+  padding-top: 4rem;
+}
