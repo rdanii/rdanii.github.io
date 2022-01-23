@@ -14,8 +14,9 @@
 .lead {
   color: blue;
   text-shadow: 3px 3px 3px black;
-  font-weight: 500;
+  font-weight: 600;
   font-style: italic;
+  margin-top: 30px;
 }
 
 #about {
