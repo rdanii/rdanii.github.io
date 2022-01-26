@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
 
   Swal.fire({
     title: 'Kirim sekarang?',
-    text: "Pastikan pesan yang akan dikirim sudah benar!",
+    text: "Pastikan pesan yang anda tulis sudah benar!",
     icon: 'question',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
     if (result.isConfirmed) {
       Swal.fire(
         'Sukses!',
-        'Pesan anda sudah dikirim.',
+        'Pesan anda sudah terkirim.',
         'success'
       )
       // Ketika tombol Kirim diklik
