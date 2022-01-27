@@ -9,11 +9,14 @@
   <!-- Bootstrap CSS -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- My CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 
   <!-- My Font -->
   <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet" />
@@ -23,7 +26,7 @@
 
 <body id="home">
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary shadow-sm ">
     <div class="container">
       <a class="navbar-brand" href="#home">Rahmat Dani</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -51,10 +54,10 @@
   <!-- Akhir Navbar -->
 
   <!-- Jumbotron -->
-  <section class="jumbotron mt-5 text-center">
+  <section class="jumbotron text-center">
     <img src="assets/img/profile.jpg" alt="Profile" width="150" class="img-thumbnail rounded-circle mb-5" />
     <h1 class="display-4">Rahmat Dani</h1>
-    <p class="lead">PHP DEVELOPER</p>
+    <p class="lead"></p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#ffffff" fill-opacity="1"
         d="M0,128L40,144C80,160,160,192,240,181.3C320,171,400,117,480,106.7C560,96,640,128,720,154.7C800,181,880,203,960,181.3C1040,160,1120,96,1200,85.3C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
@@ -67,12 +70,12 @@
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-lg text-center mb-3">
+        <div class="col-lg text-center mb-3" data-aos="fade-down" data-aos-duration="1000">
           <h2>About</h2>
         </div>
       </div>
       <div class="row justify-content-center fs-5 text-center">
-        <div class="col-lg-5">
+        <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
             hic corrupti quaerat, similique suscipit omnis harum natus minima
@@ -80,7 +83,7 @@
             architecto similique dignissimos.
           </p>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla
             ipsam in quia veniam, tempora reiciendis reprehenderit ut! Libero
@@ -107,7 +110,8 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-4 mb-3">
+
+        <div class="col-lg-4 mb-3" data-aos="flip-right">
           <div class="card">
             <img src="assets/img/thumbs/1.png" class="card-img-top" alt="Projects 1" />
             <div class="card-body">
@@ -118,7 +122,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-3">
+
+        <div class="col-lg-4 mb-3" data-aos="zoom-in-down">
           <div class="card">
             <img src="assets/img/thumbs/2.png" class="card-img-top" alt="Projects 2" />
             <div class="card-body">
@@ -129,7 +134,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-3">
+
+        <div class="col-lg-4 mb-3" data-aos="flip-left">
           <div class="card">
             <img src="assets/img/thumbs/3.png" class="card-img-top" alt="Projects 3" />
             <div class="card-body">
@@ -138,7 +144,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-3">
+
+        <div class="col-lg-4 mb-3" data-aos="zoom-in-up" data-aos-duration="2000">
           <div class="card">
             <img src="assets/img/thumbs/4.png" class="card-img-top" alt="Projects 4" />
             <div class="card-body">
@@ -147,7 +154,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-3">
+
+        <div class="col-lg-4 mb-3" data-aos="zoom-in-up" data-aos-duration="2000">
           <div class="card">
             <img src="assets/img/thumbs/5.png" class="card-img-top" alt="Projects 5" />
             <div class="card-body">
@@ -156,6 +164,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -165,6 +174,81 @@
     </svg>
   </section>
   <!-- Akhir Projects -->
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg text-center mb-3">
+          <h2>Gallery</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/1.jpg" alt="Gambar 1" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/2.jpg" alt="Gambar 2" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/3.jpg" alt="Gambar 3" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/4.jpg" alt="Gambar 4" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/5.jpg" alt="Gambar 5" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/6.jpg" alt="Gambar 6" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/7.jpg" alt="Gambar 7" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/8.jpg" alt="Gambar 8" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/9.jpg" alt="Gambar 9" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+        <div class="col-lg-3">
+          <a href="">
+            <img src="assets/img/gallery/thumbnail/10.jpg" alt="Gambar 10" class="img-fluid gallery-img">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Akhir Gallery -->
 
   <!-- Contact -->
   <section id="contact">
@@ -212,6 +296,9 @@
   </footer>
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
   <script src="assets/js/script.js"></script>
   <script src="assets/alert/sweetalert2.all.min.js"></script>
 </body>

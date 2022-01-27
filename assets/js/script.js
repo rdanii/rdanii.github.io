@@ -47,23 +47,45 @@ form.addEventListener("submit", (e) => {
   })
 })
 
+// Animasi AOS
+const galleryImg = document.querySelectorAll('.gallery-img')
 
-// btnKirim.addEventListener('click', function () {
-//   Swal.fire({
-//     title: 'Kirim sekarang?',
-//     text: "Pastikan pesan yang akan dikirim sudah benar!",
-//     icon: 'question',
-//     showCancelButton: true,
-//     confirmButtonColor: '#3085d6',
-//     cancelButtonColor: '#d33',
-//     confirmButtonText: 'Ok'
-//   }).then((result) => {
-//     if (result.isConfirmed) {
-//       Swal.fire(
-//         'Sukses!',
-//         'Pesan anda sudah dikirim.',
-//         'success'
-//       )
-//     }
-//   })
-// })
+galleryImg.forEach((img, i) => {
+  img.dataset.aos = 'fade-down'
+  img.dataset.aosDelay = i * 50
+  img.dataset.aosDuration = 1000
+})
+
+AOS.init({
+  once: true,
+  duration: 3000
+});
+
+// Animasi GSAP
+gsap.registerPlugin(TextPlugin);
+gsap.to('.lead', {
+  duration: 2,
+  delay: 1.5,
+  text: 'PHP DEVELOPER'
+})
+
+gsap.from('.jumbotron img', {
+  duration: 1,
+  rotateY: 360,
+  opacity: 0
+})
+
+gsap.from('.navbar', {
+  duration: 1.5,
+  y: '-100%',
+  opacity: 0,
+  ease: 'bounce'
+})
+
+gsap.from('.display-4', {
+  duration: 1,
+  x: -50,
+  opacity: 0,
+  delay: 0.5,
+  ease: 'back'
+})
