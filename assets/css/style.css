@@ -2,6 +2,7 @@
   padding-top: 7rem;
   background-image: url(../img/my-background.jpg);
   background-size: cover;
+  background-position: center;
   background-color: #e2edff;
 }
 
