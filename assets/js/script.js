@@ -48,14 +48,6 @@ form.addEventListener("submit", (e) => {
 })
 
 // Animasi AOS
-const galleryImg = document.querySelectorAll('.gallery-img')
-
-galleryImg.forEach((img, i) => {
-  img.dataset.aos = 'fade-down'
-  img.dataset.aosDelay = i * 50
-  img.dataset.aosDuration = 1000
-})
-
 AOS.init({
   once: true,
   duration: 3000
@@ -69,13 +61,14 @@ gsap.to('.lead', {
   text: 'PHP DEVELOPER'
 })
 
-gsap.from('.jumbotron img', {
-  duration: 1,
-  rotateY: 360,
-  opacity: 0
+gsap.from('.navbar', {
+  duration: 1.5,
+  y: '-100%',
+  opacity: 0,
+  ease: 'bounce'
 })
 
-gsap.from('.navbar', {
+gsap.from('.jumbotron img', {
   duration: 1.5,
   y: '-100%',
   opacity: 0,
@@ -89,3 +82,21 @@ gsap.from('.display-4', {
   delay: 0.5,
   ease: 'back'
 })
+
+// Tilt Js Animation
+VanillaTilt.init(document.querySelectorAll(".chars-box"), {
+  max: 25,
+  speed: 400
+});
+VanillaTilt.init(document.querySelector(".jumbotron img"), {
+  max: 40,
+  speed: 400
+});
+VanillaTilt.init(document.querySelector(".display-4"), {
+  max: 50,
+  speed: 400
+});
+VanillaTilt.init(document.querySelector(".lead"), {
+  max: 60,
+  speed: 400
+});
