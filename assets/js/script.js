@@ -62,14 +62,14 @@ gsap.to('.lead', {
 })
 
 gsap.from('.navbar', {
-  duration: 1.5,
+  duration: 2,
   y: '-100%',
   opacity: 0,
   ease: 'bounce'
 })
 
 gsap.from('.jumbotron img', {
-  duration: 1.5,
+  duration: 2,
   y: '-100%',
   opacity: 0,
   ease: 'bounce'
